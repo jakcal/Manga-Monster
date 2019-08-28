@@ -2,17 +2,15 @@
 
     <h1 class='head'>Manga Monster</h1>
 
-    <form method="post" action="index.html">
+    <form method="post" action="/signup">
         <div class="box">
-            <h1>Welcome!<br>Returning users enter your information and press login!<br>New users enter a new email address, password and sign up!</h1>
+            <h1>Welcome!</h1>
+            <input type="text" name="username" value="username" class="email" required/>
+            <input type="password" name="password" value="password" class="password" required/>
+            <br>
+            <button type='submit' class="btn">Sign Up</button>
 
-            <input type="email" name="email" value="email" class="email" />
-    
-            <input type="password" name="password" value="password" class="password" />
-    
-            <a href="#"><div class="btn">Login</div></a> <!-- End Btn -->
-
-            <a href="#"><div id="btn2">Sign Up</div></a> <!-- End Btn2 -->
+            <button type='submit' class="btn2" formaction="/login">Login</button>
     
         </div> <!-- End Box -->
     
