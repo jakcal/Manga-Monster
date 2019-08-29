@@ -11,7 +11,7 @@ module.exports = (app) => {
         user.save().then((user) => {
             const token = jwt.sign({_id: user._id}, process.env.SECRET, {expiresIn: '60 days'})
             res.cookie('nToken', token, { maxAge: 900000, httpOnly: true})
-            res.redirect(`/`)
+            res.redirect(`/home`)
         }).catch(err => {
             console.log(err.message)
             return res.status(400).send({err:err})
@@ -40,11 +40,16 @@ module.exports = (app) => {
               })
               // Set a cookie and redirect to root
               res.cookie("nToken", token, { maxAge: 900000, httpOnly: true })
-              res.redirect(`/home/${user.username}`)
+              res.redirect(`/home`)
             });
           })
           .catch(err => {
             console.log(err);
           });
     })
+
+    app.get('/logout', (req, res) => {
+        res.clearCookie('nToken');
+        res.redirect('/');
+    });
 }

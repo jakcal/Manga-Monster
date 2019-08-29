@@ -33,5 +33,6 @@ require('./db-config/develop.js')
 
 // ROUTES
 require('./routes/auth.js')(app)
+require('./routes/index.js')(app)
 
 module.exports = app 
