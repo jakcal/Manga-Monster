@@ -17,20 +17,28 @@
 <br>
 
 <div class = 'row'>
-    <div class="col-sm-8 col-sm-offset-2">
-        <ul>
+  <div class="col-2">
+    <h1 style="text-align: center; margin-top: 50%; font-size: 4em">Shounen</h1>
+  </div>
+  <div class="col-9">
+    <div class='scrollmenu'>
             {{#each data}}
+              {{#ifequal this.demographic "Demographic:Shounen"}}
                 <li class="list-group-item">
                     <div>{{this.title}}</div>
                     <div><small>{{this.authors}}</small></div>
-                    <form class="vote-up" data-id="{{this._id}}">
+                    <br>
+                    <div><img height="300" width="250" src="{{this.image-src}}"/></div>
+                </li>
+              {{/ifequal}}
+            {{/each}}
+    </div>
+  </div>
+</div>
+
+{{!-- <form class="vote-up" data-id="{{this._id}}">
                         <button type="submit">Vote Up</button>
                     </form>
                     <form class="vote-down" data-id="{{this._id}}">
                         <button type="submit">Vote Down</button>
-                    </form>
-                </li>
-            {{/each}}
-        </ul>
-    </div>
-</div>
+                    </form> --}}
