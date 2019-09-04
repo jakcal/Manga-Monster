@@ -1,2 +1,36 @@
-<a href='/logout'><li>Log Out</li></a>
-<h1>This is the home page</h1>
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="#"><li>Home</li></a>
+      <a href="#"><li>About</li></a>
+      <a href="#"><li>Info</li></a>
+      <a href="#"><li>Contact</li></a>
+      <a href='/logout'><li>Log Out</li></a>
+    </ul>
+  </div>
+</nav>
+<br>
+<br>
+
+<div class = 'row'>
+    <div class="col-sm-8 col-sm-offset-2">
+        <ul>
+            {{#each data}}
+                <li class="list-group-item">
+                    <div>{{this.title}}</div>
+                    <div><small>{{this.authors}}</small></div>
+                    <form class="vote-up" data-id="{{this._id}}">
+                        <button type="submit">Vote Up</button>
+                    </form>
+                    <form class="vote-down" data-id="{{this._id}}">
+                        <button type="submit">Vote Down</button>
+                    </form>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
