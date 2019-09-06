@@ -251,7 +251,7 @@ a:hover
 }
 
 .col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
+.col-2 {width: 17.3%;}
 .col-3 {width: 25%;}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
@@ -265,7 +265,7 @@ a:hover
 
 [class*="col-"] {
     float: left;
-    padding: 15px;
+    padding: 1px;
 }
 .row::after {
     content: "";

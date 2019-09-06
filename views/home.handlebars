@@ -23,14 +23,90 @@
   <div class="col-9">
     <div class='scrollmenu'>
             {{#each data}}
-              {{#ifequal this.demographic "Demographic:Shounen"}}
+              {{#contains this.demographic "Shounen"}}
                 <li class="list-group-item">
                     <div>{{this.title}}</div>
                     <div><small>{{this.authors}}</small></div>
                     <br>
                     <div><img height="300" width="250" src="{{this.image-src}}"/></div>
                 </li>
-              {{/ifequal}}
+              {{/contains}}
+            {{/each}}
+    </div>
+  </div>
+</div>
+<div class = 'row'>
+  <div class="col-2">
+    <h1 style="text-align: center; margin-top: 50%; font-size: 4em">Shoujo</h1>
+  </div>
+  <div class="col-9">
+    <div class='scrollmenu'>
+            {{#each data}}
+              {{#contains this.demographic "Shoujo"}}
+                <li class="list-group-item">
+                    <div>{{this.title}}</div>
+                    <div><small>{{this.authors}}</small></div>
+                    <br>
+                    <div><img height="300" width="250" src="{{this.image-src}}"/></div>
+                </li>
+              {{/contains}}
+            {{/each}}
+    </div>
+  </div>
+</div>
+<div class = 'row'>
+  <div class="col-2">
+    <h1 style="text-align: center; margin-top: 50%; font-size: 4em">Seinen</h1>
+  </div>
+  <div class="col-9">
+    <div class='scrollmenu'>
+            {{#each data}}
+              {{#contains this.demographic "Seinen"}}
+                <li class="list-group-item">
+                    <div>{{this.title}}</div>
+                    <div><small>{{this.authors}}</small></div>
+                    <br>
+                    <div><img height="300" width="250" src="{{this.image-src}}"/></div>
+                </li>
+              {{/contains}}
+            {{/each}}
+    </div>
+  </div>
+</div>
+<div class = 'row'>
+  <div class="col-2">
+    <h1 style="text-align: center; margin-top: 50%; font-size: 4em">Yaoi</h1>
+  </div>
+  <div class="col-9">
+    <div class='scrollmenu'>
+            {{#each data}}
+              {{#contains this.demographic "Yaoi"}}
+                <li class="list-group-item">
+                    <div>{{this.title}}</div>
+                    <div><small>{{this.authors}}</small></div>
+                    <br>
+                    <div><img height="300" width="250" src="{{this.image-src}}"/></div>
+                </li>
+              {{/contains}}
+            {{/each}}
+    </div>
+  </div>
+</div>
+<div class = 'row'>
+  <div class="col-2">
+    <h1 style="text-align: center; margin-top: 50%; font-size: 4em">Yuri</h1>
+  </div>
+  <div class="col-9">
+    <div class='scrollmenu'>
+            {{#each data}}
+              {{#contains this.demographic "Yuri"}}
+                <li class="list-group-item">
+                    <div>{{this.title}}</div>
+                    <div><small>{{this.authors}}</small></div>
+                    <br>
+                    <div><img height="300" width="250" src="{{this.image-src}}"/></div>
+                </li>
+              {{/contains}}
             {{/each}}
     </div>
   </div>
