@@ -113,7 +113,10 @@ h1{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  /* background-color: #333; */
+  font-size: 18px;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
 }
 
 nav ul{
@@ -131,13 +134,6 @@ nav ul a li {
     text-decoration: none;
     text-transform: uppercase;
     transition: .3s;
-}
-
-.navbar {
-    font-size: 18px;
-    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding-bottom: 10px;
 }
 
 .main-nav {
@@ -279,3 +275,23 @@ nav ul a li {
     -o-transition: all ease-in-out 500ms;
 
 }
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
